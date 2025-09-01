@@ -2,6 +2,8 @@
 #Nurit Ezra - 327739637
 def   sum_digit(num):
     x = num
+    if x<0:
+        x*=-1
     sum = 0
     while x > 0:
         sum += x % 10

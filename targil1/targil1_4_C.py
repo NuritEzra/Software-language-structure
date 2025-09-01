@@ -1,5 +1,15 @@
-#Sara Borgen - 326000841
-#Nurit Ezra - 327739637
+def dictionaryPrime(num):
+
+    dictionary={
+    }
+    for i in range(1,num+1):
+        if prime(i)==True:
+            tp=twin(i)
+            if tp==-1:
+                dictionary[i]=None
+            else:
+                dictionary[i]=twin(i)
+    return dictionary
 
 def twin(num):
     if prime(num)==True:
@@ -23,17 +33,14 @@ def prime(n):
 
 
 def main():
-    print("enter prime number:")
+    print("enter number:")
     try:
         num = int(input())
     except ValueError:
         print("invalid input")
         return
-    temp=twin(num)
-    if temp==-1:
-        print("invalid input")
-    else:
-        print(temp)
+    print(dictionaryPrime(num))
+
 
 if __name__ == "__main__":
     main()
